@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://ya6j33m01c0j"]
+
+[ext_resource type="Script" path="res://Scenes/meter.gd" id="1_t2lm6"]
+[ext_resource type="Texture2D" uid="uid://bxmihsjwyg576" path="res://Sprites/meter_under.png" id="2_7g7xm"]
+[ext_resource type="Texture2D" uid="uid://63rp5wh0yxqf" path="res://Sprites/meter_over.png" id="3_vq4bn"]
+[ext_resource type="Texture2D" uid="uid://mweo08w8mwql" path="res://Sprites/meter_progress.png" id="4_gfc2v"]
+[ext_resource type="AudioStream" uid="uid://dd16x70uttmu1" path="res://Audio/failed.ogg" id="5_q0csq"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t2lm6")
+
+[node name="Inner" type="TextureProgressBar" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -8.0
+offset_right = 100.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1000.0
+step = 0.01
+texture_under = ExtResource("2_7g7xm")
+texture_over = ExtResource("3_vq4bn")
+texture_progress = ExtResource("4_gfc2v")
+texture_progress_offset = Vector2(3, 3)
+
+[node name="Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_q0csq")

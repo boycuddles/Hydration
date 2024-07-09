@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://csuy2vm6xucnc"]
+
+[ext_resource type="Script" path="res://Scripts/ballsack.cs" id="1_1amsl"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_1amsl")

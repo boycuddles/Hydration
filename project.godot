@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hydration 2.0"
+run/main_scene="res://Scenes/main.tscn"
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
+
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+GlobalInput="*res://addons/global_input/autoloads/global_input_gdscript/GlobalInputGDScript.tscn"
+
+[display]
+
+window/size/always_on_top=true
+window/defaults/default_clear_color=Color(0, 1, 0, 1)
+
+[dotnet]
+
+project/assembly_name="Hydration 2.0"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/global_input/plugin.cfg")
+
+[input]
+
+erer={
+"deadzone": 0.5,
+"events": []
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 1, 0, 1)
